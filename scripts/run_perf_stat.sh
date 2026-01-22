@@ -20,11 +20,27 @@ run_case() {
 
   local tmp
   tmp=$(mktemp)
-  perf stat -x , -e "$EVENTS" -- "$BIN" "$@" 2> "$tmp" 1> /dev/null
+  local perf_ok=1
+  if ! perf stat -x , -e "$EVENTS" -- "$BIN" "$@" 2> "$tmp" 1> /dev/null; then
+    perf_ok=0
+  fi
 
   get_event() {
     local ev=$1
-    awk -F, -v ev="$ev" '$3==ev {gsub(/ /, "", $1); print $1; exit}' "$tmp"
+    local value
+    value=$(awk -F, -v ev="$ev" '{
+      gsub(/ /, "", $3);
+      if ($3==ev || $3==ev":u" || $3==ev":k") {
+        gsub(/ /, "", $1);
+        print $1;
+        exit;
+      }
+    }' "$tmp")
+    if [[ -z "$value" ]]; then
+      echo "NA"
+    else
+      echo "$value"
+    fi
   }
 
   local cycles instructions branches branch_misses cache_refs cache_misses l1_misses llc_misses
@@ -37,8 +53,14 @@ run_case() {
   l1_misses=$(get_event L1-dcache-load-misses)
   llc_misses=$(get_event LLC-load-misses)
 
+  if [[ "$perf_ok" -eq 0 ]]; then
+    echo "perf stat failed for $case_label/$kernel. See: $tmp" >&2
+  fi
+
   echo "$case_label,$dtype,$kernel,$cycles,$instructions,$branches,$branch_misses,$cache_refs,$cache_misses,$l1_misses,$llc_misses" >> "$OUT"
-  rm -f "$tmp"
+  if [[ "$perf_ok" -eq 1 ]]; then
+    rm -f "$tmp"
+  fi
 }
 
 run_case small32 fp32 base --case small --kernel base
