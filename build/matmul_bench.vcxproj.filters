@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\MyData\CS\MyProject\tmp\matmul_lab\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\MyData\CS\MyProject\tmp\matmul_lab\src\matrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\MyData\CS\MyProject\tmp\matmul_lab\src\gemm_ref.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\MyData\CS\MyProject\tmp\matmul_lab\src\gemm_base.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\MyData\CS\MyProject\tmp\matmul_lab\src\gemm_opt_32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\MyData\CS\MyProject\tmp\matmul_lab\src\gemm_opt_4096.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\MyData\CS\MyProject\tmp\matmul_lab\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{363874F6-4C1B-38A0-B49B-A7C792C2E176}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

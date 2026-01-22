@@ -1,0 +1,3 @@
+C:/MyData/CS/MyProject/tmp/matmul_lab/build/CMakeFiles/matmul_bench.dir
+C:/MyData/CS/MyProject/tmp/matmul_lab/build/CMakeFiles/ALL_BUILD.dir
+C:/MyData/CS/MyProject/tmp/matmul_lab/build/CMakeFiles/ZERO_CHECK.dir

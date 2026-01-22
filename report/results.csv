@@ -1,0 +1,5 @@
+case,dtype,kernel,size,time_ms,gflops,repeat,warmup,verify_checked,verify_mismatches,verify_max_abs,verify_max_rel
+small32,fp32,base,32,0.0026,25.2062,100000,10,1024,0,1.11759e-08,0.000120408
+small32,fp32,opt,32,0.0012,54.6133,100000,10,1024,0,1.11759e-08,0.000120408
+large4096,fp64,base,4096,23092.4,5.95169,3,1,0,0,0,0
+large4096,fp64,opt,4096,15009,9.15709,3,1,0,0,0,0

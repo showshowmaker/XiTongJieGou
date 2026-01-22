@@ -1,0 +1,10 @@
+^C:\MYDATA\CS\MYPROJECT\TMP\MATMUL_LAB\BUILD\CMAKEFILES\7750C508199AA1D572E124FA7D3AE625\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/MyData/CS/MyProject/tmp/matmul_lab -BC:/MyData/CS/MyProject/tmp/matmul_lab/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/MyData/CS/MyProject/tmp/matmul_lab/build/matmul_lab.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

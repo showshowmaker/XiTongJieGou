@@ -1,0 +1,6 @@
+C:\MyData\CS\MyProject\tmp\matmul_lab\src\main.cpp;C:\MyData\CS\MyProject\tmp\matmul_lab\build\matmul_bench.dir\Release\main.obj
+C:\MyData\CS\MyProject\tmp\matmul_lab\src\matrix.cpp;C:\MyData\CS\MyProject\tmp\matmul_lab\build\matmul_bench.dir\Release\matrix.obj
+C:\MyData\CS\MyProject\tmp\matmul_lab\src\gemm_ref.cpp;C:\MyData\CS\MyProject\tmp\matmul_lab\build\matmul_bench.dir\Release\gemm_ref.obj
+C:\MyData\CS\MyProject\tmp\matmul_lab\src\gemm_base.cpp;C:\MyData\CS\MyProject\tmp\matmul_lab\build\matmul_bench.dir\Release\gemm_base.obj
+C:\MyData\CS\MyProject\tmp\matmul_lab\src\gemm_opt_32.cpp;C:\MyData\CS\MyProject\tmp\matmul_lab\build\matmul_bench.dir\Release\gemm_opt_32.obj
+C:\MyData\CS\MyProject\tmp\matmul_lab\src\gemm_opt_4096.cpp;C:\MyData\CS\MyProject\tmp\matmul_lab\build\matmul_bench.dir\Release\gemm_opt_4096.obj
