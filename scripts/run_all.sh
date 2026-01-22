@@ -33,11 +33,11 @@ cat > "$PERF_CSV" <<EOF
 case,dtype,kernel,cycles,instructions,branches,branch_misses,cache_references,cache_misses,l1_misses,llc_misses
 EOF
 
-"$ROOT_DIR/scripts/run_perf_stat.sh" "$BIN" "$PERF_CSV"
+bash "$ROOT_DIR/scripts/run_perf_stat.sh" "$BIN" "$PERF_CSV"
 
 if [[ "$RECORD" -eq 1 ]]; then
-  "$ROOT_DIR/scripts/run_perf_record.sh" "$BIN" small opt
-  "$ROOT_DIR/scripts/run_perf_record.sh" "$BIN" large opt
+  bash "$ROOT_DIR/scripts/run_perf_record.sh" "$BIN" small opt
+  bash "$ROOT_DIR/scripts/run_perf_record.sh" "$BIN" large opt
 fi
 
 echo "Done. Results: $RESULTS_CSV"
